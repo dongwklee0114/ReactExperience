@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef } from 'react';
 import '../index.css';
 
 import SurveySteps from '../SurveySteps/SurveySteps';
@@ -8,6 +8,7 @@ function Survey(props) {
     const [poll, setPoll] = useState([]);
     const [step, setStep] = useState(0);
     const [resultList, setResultList] = useState([]);
+    const [stepContent, setStepContent] = useState([]);
     const questionList = [  // 설문 목록
         {id: 1, title: '환영 인사', question: ["방가", "안녕"]},
         {id: 2, title: '첫번째 질문', question: ["붉은색", "노란색", "주황색", "남색"]},
@@ -19,34 +20,34 @@ function Survey(props) {
     const stepIndex = Object.keys(questionList).length - 1;
     let percent = '';
     let stepText = '';
+    const prevBtnRef = useRef(null);
 
     useEffect(() => {
         if (step <= stepIndex) {
             percent = (100 / stepIndex * step) + '%';
             stepText = 'Step.' + [step];
-            document.querySelector('.survey_steps').innerHTML = stepText;
+
             let selectQuestionList = questionList[step]  // step state를 바탕으로 현재 step에 보여줘야할 선택지 필터링
             setPoll(
                 <SurveyContent onClick={radioBtn} key={selectQuestionList.id} step={step}
                 title={selectQuestionList.title} question={selectQuestionList.question}/>
             );
-            let surveyPrevBtn = document.querySelector('.survey_prev');
-            surveyPrevBtn.disabled = false;
-            surveyPrevBtn.classList.remove('first_step');
+
+            prevBtnRef.current.disabled = false;
+            prevBtnRef.current.classList.remove('first_step');
 
             if (step === 0) {  // 가장 첫번째 화면
-                document.querySelector('.survey_percent').innerHTML = percent;
-                document.querySelector('.survey_steps').style.width = '8%';
-                surveyPrevBtn.disabled = true;  // prev 버튼 비활성화
-                surveyPrevBtn.classList.add('first_step');  // prev 버튼에 first_step 클래스 추가
+                percent = '8%';
 
+                prevBtnRef.current.disabled = true;  // prev 버튼 비활성화
+                prevBtnRef.current.classList.add('first_step');  // prev 버튼에 first_step 클래스 추가
             } else if (step === stepIndex) {  // 마지막 선택지인 경우
-                document.querySelector('.survey_percent').innerHTML = percent;
-                document.querySelector('.survey_steps').style.width = '90%';
-                
-            } else {
-                document.querySelector('.survey_percent').innerHTML = document.querySelector('.survey_steps').style.width = percent;
+                percent = '90%';
             }
+
+            setStepContent(
+                <SurveySteps percent={percent} stepText={stepText} />
+            )
         }
     }, [step]);
 
@@ -65,7 +66,7 @@ function Survey(props) {
                     alert('항목을 선택해 주세요!');
                 }
             } else {  // 마지막 선택지를 고른 경우
-                if (window.confirm('제출하시겠습니까?')) {
+                if (window.confirm('설문이 종료되었습니다. \n제출하시겠습니까?')) {
                     window.location.reload();
                 };
             }
@@ -83,15 +84,15 @@ function Survey(props) {
         }
     };
 
-    return <section className="survey_base show" >
-                <div className="survey" >
-                <SurveySteps percent='0' stepText={stepText} />
+    return <section className="survey_base show">
+                <div className="survey">
+                    {stepContent}
                 <div className="survey_radio">
                     {poll}
                 </div>
                 <div className="survey_next_prev">
-                    <button className="survey_prev first_step" onClick={() => { stepBtn('prev') }}>Prev</button>
-                    <button id="survey_1_next" className="survey_next" onClick={() => { stepBtn('next') }}>Next</button>
+                    <button ref={prevBtnRef} className="survey_prev" onClick={() => { stepBtn('prev') }}>Prev</button>
+                    <button className="survey_next" onClick={() => { stepBtn('next') }}>Next</button>
                 </div>
             </div>
         </section>

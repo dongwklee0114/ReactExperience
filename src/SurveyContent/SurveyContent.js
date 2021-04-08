@@ -6,7 +6,7 @@ function SurveyContent(props) {
     const inputId = 'survey_' + props.step;
     const radioListItem = propsQuestion.map((listQuestion, i) =>
         <span key={inputId + i} className="survey_radio_btn">
-            <input onClick={() => { props.onClick(listQuestion) }} id={inputId + i} name={inputId} className="policy_checkbox" type="radio" value={listQuestion}/>
+            <input onClick={() => { props.onClick(listQuestion) }} id={inputId + i} className="policy_checkbox" type="radio" value={listQuestion}/>
             <label htmlFor={inputId + i}>{listQuestion}</label>
         </span>
     );
