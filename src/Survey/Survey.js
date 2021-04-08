@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef } from 'react';
-import '../index.css';
 
 import SurveySteps from '../SurveySteps/SurveySteps';
 import SurveyContent from '../SurveyContent/SurveyContent';
+import styles from './survey.css';
 
 function Survey(props) {
     const [poll, setPoll] = useState([]);

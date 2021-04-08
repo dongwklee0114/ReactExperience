@@ -1,0 +1,49 @@
+.survey {
+    width: 92%;
+    padding: 60px 0 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 1024px;
+}
+
+.survey_next_prev {
+    margin-top: 20px;
+}
+
+.survey_next_prev.artwork_checked_step {
+    margin-top: 35px;
+}
+
+.survey_prev {
+    width: 60px;
+    height: 24px;
+    border: 1px solid #544bf0;
+    background: #fff;
+    color: #544bf0;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: 16px;
+    margin-right: 8px;
+}
+
+.survey_prev.first_step,
+.survey_next.first_step {
+    border: 1px solid #d8d8d8;
+    color: #d8d8d8;
+    cursor: default;
+}
+
+.survey_next {
+    width: 60px;
+    height: 24px;
+    border: 1px solid #544bf0;
+    background: #fff;
+    color: #544bf0;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: 16px;
+}

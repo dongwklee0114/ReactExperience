@@ -1,5 +1,5 @@
 import React from 'react';
-import '../index.css';
+import styles from './surveysteps.css';
 
 function SurveySteps(props) {
     let surveySteps = <div className="survey_bar">

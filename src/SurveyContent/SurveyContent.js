@@ -1,5 +1,5 @@
 import React from 'react';
-import '../index.css';
+import styles from './surveycontent.css';
 
 function SurveyContent(props) {
     let propsQuestion = props.question;

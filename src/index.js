@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import Survey from './Survey/Survey';
+import styles from './base.css';
 
 // ========================================
 
