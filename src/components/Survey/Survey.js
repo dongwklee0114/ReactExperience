@@ -1,8 +1,11 @@
 import React, {useState, useEffect, useRef } from 'react';
 
 import SurveySteps from 'components/SurveySteps/SurveySteps';
+
 import SurveyContent from 'components/SurveyContent/SurveyContent';
 import styles from './survey.css';
+import history from "../../utils/history";
+
 
 function Survey(props) {
     const [poll, setPoll] = useState([]);
@@ -48,6 +51,7 @@ function Survey(props) {
             setStepContent(
                 <SurveySteps percent={percent} stepText={stepText} />
             )
+
         }
     }, [step]);
 
@@ -67,7 +71,8 @@ function Survey(props) {
                 }
             } else {  // 마지막 선택지를 고른 경우
                 if (window.confirm('설문이 종료되었습니다. \n제출하시겠습니까?')) {
-                    window.location.reload();
+                    
+                history.push('/');
                 };
             }
         }
@@ -76,7 +81,8 @@ function Survey(props) {
     function radioBtn(value) {  // radio 버튼 클릭시 동작
         if (step === stepIndex) {  // 마지막 선택지를 고른 경우
             if (window.confirm('제출하시겠습니까?')) {
-                window.location.reload();
+                            
+                history.push('/');
             };
         } else {
             setResultList([...resultList, value]);  // 기존 state 배열에 선택지를 추가

@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './client/root';
 import reportWebVitals from './reportWebVitals';
-import Survey from 'components/Survey/Survey';
-import styles from './base.css';
+import style from 'base.css'
+export { default as Home } from './pages/home';
+export { default as ArtSurvey } from './pages/artsurvey';
 
 // ========================================
 
-ReactDOM.render(
-    <Survey/>,
-    document.getElementById('root')
-);
+// ReactDOM.render(<Survey/>,document.getElementById('root'));
+
+
+ReactDOM.render(<Root />, document.getElementById('root'));
+
 
 // ========================================
 
