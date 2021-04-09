@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef } from 'react';
 
-import SurveySteps from '../SurveySteps/SurveySteps';
-import SurveyContent from '../SurveyContent/SurveyContent';
+import SurveySteps from 'components/SurveySteps/SurveySteps';
+import SurveyContent from 'components/SurveyContent/SurveyContent';
 import styles from './survey.css';
 
 function Survey(props) {
