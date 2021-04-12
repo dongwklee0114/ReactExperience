@@ -8,8 +8,8 @@ import Survey from '../components/Survey/Survey';
 const ArtSurvey = () => {
     return (
         <div>
-            <Menu/>
-            <Survey/>
+            <Menu />
+            <Survey />
         </div>
     );
 };

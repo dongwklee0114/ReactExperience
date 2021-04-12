@@ -8,11 +8,7 @@ export { default as ArtSurvey } from './pages/artsurvey';
 
 // ========================================
 
-// ReactDOM.render(<Survey/>,document.getElementById('root'));
-
-
 ReactDOM.render(<Root />, document.getElementById('root'));
-
 
 // ========================================
 
