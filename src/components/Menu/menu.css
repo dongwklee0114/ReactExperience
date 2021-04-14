@@ -1,0 +1,160 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    min-width: 320px;
+    height: 60px;
+    background-color: #fff;
+    color: #222;
+    font-size: 16px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.1), 0 1px 8px rgba(0,0,0,0.03);
+}
+
+#header-wrap {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+#header-logo {
+    background: url("./img/korea_flag_logo.png") no-repeat;
+    background-size: contain;
+    float: left;
+    width: 66px;
+    height: 60px;
+    margin-left: 16px;
+}
+#header-nav {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    /* 
+    if we did this instead of the template it would be a problem:
+    grid-auto-flow: column;
+    */
+    font-weight: normal;
+    font: 115% system-ui;
+    text-align: center;    
+    padding: 19px 0px;
+  }
+  
+.header-navBtn {
+    font-weight: normal;
+}
+
+.header-navBtn:hover {
+    font-weight: bold;
+}
+
+#header-sub-menu {
+    width: 100%;
+    height: 172px;
+    background-color: rgba(255, 255, 255, .95);
+    position: absolute;
+    display: none;
+    top: 60px;
+    border-top: 1px solid #eee;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.header-sub-ul {
+    position: absolute;
+    top: 70px;
+    left: -1px;
+    color: #7c7c7d;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.header-sub-ul:last-child {
+    width: 120px;
+}
+
+.header-sub-li > a {
+    padding-left: 23px;
+    padding-top: 13px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.header-sub-li {
+    color: #7c7c7d;
+}
+
+#header-right {
+    float: right;
+}
+#header-notice {
+    float: right;
+    padding: 9px 0 9px;
+    position: relative;
+}
+#header-cart,
+#header-mycollection {
+    float: left;
+    padding: 9px 0;
+}
+#header-cart-btn,
+#header-mycollection-btn {
+    display: block;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    background: url("./img/header_icon_sprite.png") no-repeat;
+    background-size: 312px 42px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#header-cart-btn {
+    background-position: -168px 0;
+}
+#header-mycollection-btn {
+    background-position: -210px 0;
+}
+
+#userBox {
+    float: left;
+    width: 131px;
+    height: 42px;
+    padding: 9px;
+    border-left: 1px solid #eee;
+    margin-left: 9px;
+    line-height: 42px;
+    font-size: 14px;
+}
+#userBox-loggedIn {
+    display: none;
+    position: relative;
+}
+#userBox-loggedOut {
+    display: block;
+    text-align: center;
+}
+.logged_in #userBox-loggedIn {
+    display: block;
+}
+.logged_in #userBox-loggedOut {
+    display: none;
+}
+#userBox-loginBtn,
+#userBox-joinBtn {
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+#userBox-loginBtn {
+    width: 59px;
+}
+#userBox-joinBtn {
+    width: 72px;
+}
+
+#header-cart-btn:hover,
+#header-mycollection-btn:hover,
+#userBox-loginBtn:hover,
+#userBox-joinBtn:hover {
+    opacity: .7;
+}
