@@ -1,0 +1,50 @@
+.imageCardRow {
+    margin: 0 auto;
+    padding: 68px 0;
+    box-sizing: border-box;
+    max-width: 1200px;
+    min-height: 200px;
+    width: calc(100% - 40px);
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imageCardRow h2 {
+    font-size: 40px;
+    padding-bottom: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.imageCard {
+    width: calc(100% - 48px);
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 10px 22px 0 rgb(234 227 213);
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+    text-align: center;
+    border-bottom: 3px solid #fff
+}
+
+.imageCard:hover {
+    transform: translateY(-7px);
+    border-color: #ef7f4d;
+}
+
+.imageCard h3 {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 16px 0 8px;
+}
+
+.imageCard img {
+    border-radius: 50%;
+}

@@ -1,0 +1,15 @@
+.chartDiv {
+    height: 500px;
+}
+
+.chart h2 {
+    font-size: 40px;
+    padding-bottom: 24px;
+    background: linear-gradient(to right, #fbcac9 0%, #8ca6ce 60%, #8c92ce 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

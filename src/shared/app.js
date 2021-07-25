@@ -8,10 +8,10 @@ import { Router } from "react-router-dom";
 class App extends Component {
     render() {
         return (
-            <div>
+            <>
                 <Route exact path="/" component={Home} />
                 <Route path="/art-survey/" component={ArtSurvey} />
-            </div>
+            </>
         );
     }
 }

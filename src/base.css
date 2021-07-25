@@ -1,3 +1,27 @@
+@charset "utf-8";
+* {margin: 0; padding: 0;}
+footer, header, nav, section {display: block;}
+html {-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+a {background: transparent; text-decoration: none;color: inherit;cursor:pointer;}
+a:focus, a:active, a:hover {outline: 0;}
+h1 {font-size: 2em; font-weight: bold;}
+h2 {font-size: 1.9375em; font-weight: bold;}
+h3 {font-size: 1em; font-weight: normal;}
+b, strong {font-weight: bold;}
+img {border: 0; max-width: 100%; vertical-align: top;}
+ol, ul {list-style: none;}
+button, input, select, textarea {font-family: inherit; font-size: 100%; margin: 0; vertical-align: middle;}
+button, input {line-height: normal;}
+button, select {text-transform: none;}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance: button; cursor: pointer;}
+button[disabled], html input[disabled] {cursor: default;}
+input[type="checkbox"], input[type="radio"] {box-sizing: border-box; padding: 0;}
+input[type="search"] {-webkit-appearance: textfield; -moz-box-sizing: content-box; box-sizing: content-box;}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+button::-moz-focus-inner, input::-moz-focus-inner {border: 0; padding: 0;}
+textarea {overflow: auto; vertical-align: top;}
+table {border-collapse: collapse; border-spacing: 0;}
+
 body {
     margin: 0;
     font-size: 16px;
@@ -22,7 +46,50 @@ body {
     src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
 }
 
-a {
-    font-size: 20px;
-    font-weight: bold;;
+#root {
+    min-height: calc(100vh - 156px);
+    position: relative;
+    padding: 60px 0 96px;
+}
+
+.whiteBg {
+    background: #fff;
+}
+
+.lightBrownBg {
+    background: #fef8f5;
+}
+
+.blackBg {
+    background: #222222;
+}
+
+.col_1 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.col_2 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.col_3 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 33%;
+}
+
+.col_4 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.col_5 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 20%;
 }

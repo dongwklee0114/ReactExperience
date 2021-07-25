@@ -1,0 +1,110 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    min-width: 320px;
+    height: 60px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #ef7f4d;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.1), 0 1px 8px rgba(0,0,0,0.03);
+}
+
+#header a {
+    transition: all .4s;
+}
+
+#header a:hover {
+    opacity: .7;
+}
+
+.headerWrap {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.headerLoge {
+    background: url("./img/logo.png") no-repeat;
+    background-size: 52px 52px;
+    background-position-y: 2px;
+    float: left;
+    width: 66px;
+    height: 60px;
+    margin-left: 16px;
+}
+.headerNav {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    font-weight: normal;
+    font: 115% system-ui;
+    text-align: center;    
+    padding: 19px 0;
+  }
+
+.headerRight {
+    float: right;
+}
+.headerColor,
+.headerLike {
+    float: left;
+    padding: 9px 0;
+}
+.headerColorIcon,
+.headerLikeIcon {
+    display: block;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: 28px 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.headerColorIcon {
+    background-image: url("./img/color_icon.png");
+}
+.headerLikeIcon {
+    background-image: url("./img/like_icon.png");
+}
+
+.userBox {
+    float: left;
+    width: 131px;
+    height: 42px;
+    padding: 9px;
+    border-left: 1px solid #eee;
+    margin-left: 9px;
+    line-height: 42px;
+    font-size: 14px;
+}
+.userBoxLoggedOut {
+    display: block;
+    text-align: center;
+}
+.userBoxLoginBtn,
+.userBoxJoinBtn {
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+.userBoxLoginBtn {
+    width: 59px;
+}
+.userBoxJoinBtn {
+    width: 72px;
+}
+
+.headerColorIcon:hover,
+.headerLikeIcon:hover,
+.userBoxLoginBtn:hover,
+.userBoxJoinBtn:hover {
+    opacity: .7;
+}

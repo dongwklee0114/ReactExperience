@@ -1,19 +1,42 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import styles from './menu.css'
+
 
 const Menu = () => {
     const activeStyle = {
-        color: 'green',
+        fontWeight: 'bold',
+        opacity: '1'
     };
-
-    return (
-        <div>
-            <ul>
-                <li><NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink></li>
-                <li><NavLink to="/art-survey" activeStyle={activeStyle}>ArtSurvey</NavLink></li>
-            </ul>
-            <hr />
+    let nav = <nav className="headerWrap cf">
+        <div className="headerLoge"></div>
+        <div className="headerRight">
+            <div className="headerColor">
+                <a className="headerColorIcon">color</a>
+            </div>
+            <div className="headerLike">
+                <a className="headerLikeIcon">like</a>
+            </div>
+            <div className="userBox">
+                <div className="userBoxLoggedOut cf">
+                    <a className="userBoxLoginBtn">로그인</a>
+                    <a className="userBoxJoinBtn">회원가입</a>
+                </div>
+            </div>
         </div>
+    </nav>;
+    let ul = <ul className="headerNav">
+        <li><NavLink className="headerNavBtn" exact to="/" activeStyle={activeStyle}>Home</NavLink></li>
+        <li><NavLink className="headerNavBtn" to="/art-survey" activeStyle={activeStyle}>ArtSurvey</NavLink></li>
+        <li><a className="headerNavBtn">Skill</a></li>
+    </ul>;
+
+    return (<>
+            <header id="header">
+                {nav}
+                {ul}
+            </header>
+        </>
     );
 };
 
