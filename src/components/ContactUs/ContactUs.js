@@ -37,7 +37,8 @@ function ContactUs(props) {
                     </div>
                 </div>
                 <div className="contactMap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.81148227841!2d-74.006113!3d40.71002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbc9c50c74931%3A0xe1d1ca4e0be4d296!2z7ISc7Jq47Yq567OE7IucIOyEseu2geq1rCDsooXslZTrj5kgMTAtNQ!5e0!3m2!1sko!2skr!4v1627149693445!5m2!1sko!2skr"
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.81148227841!2d-74.006113!3d40.71002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbc9c50c74931%3A0xe1d1ca4e0be4d296!2z7ISc7Jq47Yq567OE7IucIOyEseu2geq1rCDsooXslZTrj5kgMTAtNQ!5e0!3m2!1sko!2skr!4v1627149693445!5m2!1sko!2skr"
                         loading="lazy"/>
                 </div>
             </div>

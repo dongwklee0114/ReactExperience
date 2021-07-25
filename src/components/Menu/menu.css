@@ -9,7 +9,7 @@
     background-color: #fff;
     font-size: 16px;
     color: #ef7f4d;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.1), 0 1px 8px rgba(0,0,0,0.03);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.03);
 }
 
 #header a {
@@ -26,6 +26,7 @@
     margin: 0 auto;
     max-width: 1200px;
 }
+
 .headerLoge {
     background: url("./img/logo.png") no-repeat;
     background-size: 52px 52px;
@@ -35,24 +36,27 @@
     height: 60px;
     margin-left: 16px;
 }
+
 .headerNav {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     font-weight: normal;
     font: 115% system-ui;
-    text-align: center;    
+    text-align: center;
     padding: 19px 0;
-  }
+}
 
 .headerRight {
     float: right;
 }
+
 .headerColor,
 .headerLike {
     float: left;
     padding: 9px 0;
 }
+
 .headerColorIcon,
 .headerLikeIcon {
     display: block;
@@ -71,6 +75,7 @@
 .headerColorIcon {
     background-image: url("./img/color_icon.png");
 }
+
 .headerLikeIcon {
     background-image: url("./img/like_icon.png");
 }
@@ -85,19 +90,23 @@
     line-height: 42px;
     font-size: 14px;
 }
+
 .userBoxLoggedOut {
     display: block;
     text-align: center;
 }
+
 .userBoxLoginBtn,
 .userBoxJoinBtn {
     display: block;
     float: left;
     cursor: pointer;
 }
+
 .userBoxLoginBtn {
     width: 59px;
 }
+
 .userBoxJoinBtn {
     width: 72px;
 }

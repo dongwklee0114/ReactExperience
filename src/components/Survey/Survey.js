@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 import SurveySteps from 'components/SurveySteps/SurveySteps';
 
 import SurveyContent from 'components/SurveyContent/SurveyContent';
 import styles from './survey.css';
 
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 function Survey(props) {
     let history = useHistory();
@@ -14,12 +14,12 @@ function Survey(props) {
     const [resultList, setResultList] = useState([]);
     const [stepContent, setStepContent] = useState([]);
     const questionList = [  // 설문 목록
-        { id: 1, title: '환영 인사', question: ["방가", "안녕"] },
-        { id: 2, title: '첫번째 질문', question: ["붉은색", "노란색", "주황색", "남색"] },
-        { id: 3, title: '두번째 질문', question: ["밥", "고기", "회", "국수", "빵"] },
-        { id: 4, title: '세번째 질문', question: ["바지", "셔츠", "치마", "조끼", "반바지"] },
-        { id: 5, title: '네번째 질문', question: ["긴머리", "짧은머리", "파마", "단발"] },
-        { id: 6, title: '다섯번째 질문', question: ["운동", "독서", "게임", "야구", "축구"] },
+        {id: 1, title: '환영 인사', question: ["방가", "안녕"]},
+        {id: 2, title: '첫번째 질문', question: ["붉은색", "노란색", "주황색", "남색"]},
+        {id: 3, title: '두번째 질문', question: ["밥", "고기", "회", "국수", "빵"]},
+        {id: 4, title: '세번째 질문', question: ["바지", "셔츠", "치마", "조끼", "반바지"]},
+        {id: 5, title: '네번째 질문', question: ["긴머리", "짧은머리", "파마", "단발"]},
+        {id: 6, title: '다섯번째 질문', question: ["운동", "독서", "게임", "야구", "축구"]},
     ];
     const stepIndex = Object.keys(questionList).length - 1;
     let percent = '';
@@ -34,7 +34,7 @@ function Survey(props) {
             let selectQuestionList = questionList[step]  // step state를 바탕으로 현재 step에 보여줘야할 선택지 필터링
             setPoll(
                 <SurveyContent onClick={radioBtn} key={selectQuestionList.id} step={step}
-                    title={selectQuestionList.title} question={selectQuestionList.question} />
+                               title={selectQuestionList.title} question={selectQuestionList.question}/>
             );
 
             prevBtnRef.current.disabled = false;
@@ -50,7 +50,7 @@ function Survey(props) {
             }
 
             setStepContent(
-                <SurveySteps percent={percent} stepText={stepText} />
+                <SurveySteps percent={percent} stepText={stepText}/>
             )
 
         }
@@ -75,9 +75,10 @@ function Survey(props) {
                     history.push({
                         pathname: '/',
                         search: '?query=survey-complete',
-                        state: { detail: resultList }
+                        state: {detail: resultList}
                     });
-                };
+                }
+                ;
             }
         }
     };
@@ -88,9 +89,10 @@ function Survey(props) {
                 history.push({
                     pathname: '/',
                     search: '?query=survey-complete',
-                    state: { detail: resultList }
+                    state: {detail: resultList}
                 });
-            };
+            }
+            ;
         } else {
             setResultList([...resultList, value]);  // 기존 state 배열에 선택지를 추가
             setStep(step + 1);
@@ -104,8 +106,14 @@ function Survey(props) {
                 {poll}
             </div>
             <div className="survey_next_prev">
-                <button ref={prevBtnRef} className="survey_prev" onClick={() => { stepBtn('prev') }}>Prev</button>
-                <button className="survey_next" onClick={() => { stepBtn('next') }}>Next</button>
+                <button ref={prevBtnRef} className="survey_prev" onClick={() => {
+                    stepBtn('prev')
+                }}>Prev
+                </button>
+                <button className="survey_next" onClick={() => {
+                    stepBtn('next')
+                }}>Next
+                </button>
             </div>
         </div>
     </section>

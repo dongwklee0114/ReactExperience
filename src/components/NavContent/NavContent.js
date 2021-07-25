@@ -24,7 +24,9 @@ function NavContent(props) {
             className = className + " current"
         }
         navBtnDot.push(
-            <div onClick={() => { props.onClick(i) }}  className={className} key={i}>
+            <div onClick={() => {
+                props.onClick(i)
+            }} className={className} key={i}>
                 <div className="navBtnDotEffect"/>
             </div>
         )
