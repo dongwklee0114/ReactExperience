@@ -1,0 +1,76 @@
+.navContent {
+    position: relative;
+    margin: 0 auto;
+    padding: 68px 0;
+    box-sizing: border-box;
+    max-width: 1200px;
+    min-height: 200px;
+}
+
+.navContent h2 {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 24px;
+    display: block;
+    margin: 0 auto;
+}
+
+.navContent .content {
+    width: 100%;
+    color: #fff;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 480px;
+}
+
+.navContent .content p {
+    font-size: 26px;
+    line-height: 2;
+}
+
+.navContent .navBtn {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navContent .navBtnDot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.navContent .navBtnDot .navBtnDotEffect {
+    width: 7px;
+    height: 7px;
+    visibility: hidden;
+    transition: all .1s;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navContent .navBtnDot:hover .navBtnDotEffect {
+    visibility: visible;
+    width: 14px;
+    height: 14px;
+}
+
+.navContent .navBtnDot:nth-child(n + 2) {
+    margin-left: 8px;
+}
+
+.navContent .navBtnDot.current {
+    background: #fff;
+    cursor: default;
+}

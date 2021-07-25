@@ -2,7 +2,7 @@
 * {margin: 0; padding: 0;}
 footer, header, nav, section {display: block;}
 html {-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
-a {background: transparent; text-decoration: none;color: inherit;}
+a {background: transparent; text-decoration: none;color: inherit;cursor:pointer;}
 a:focus, a:active, a:hover {outline: 0;}
 h1 {font-size: 2em; font-weight: bold;}
 h2 {font-size: 1.9375em; font-weight: bold;}
@@ -47,5 +47,49 @@ body {
 }
 
 #root {
-    padding: 60px 0;
+    min-height: calc(100vh - 156px);
+    position: relative;
+    padding: 60px 0 96px;
+}
+
+.whiteBg {
+    background: #fff;
+}
+
+.lightBrownBg {
+    background: #fef8f5;
+}
+
+.blackBg {
+    background: #222222;
+}
+
+.col_1 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.col_2 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.col_3 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 33%;
+}
+
+.col_4 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.col_5 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 20%;
 }
