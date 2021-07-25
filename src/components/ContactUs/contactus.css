@@ -1,5 +1,4 @@
 .contactUs {
-
 }
 
 .contactUs h2 {
@@ -70,15 +69,17 @@
     height: 100%;
     background-position: -86px -22px;
 }
-.socialLinks a.facebook:hover  {
+
+.socialLinks a.facebook:hover {
     background: linear-gradient(to right, #8ed9f3, #3174ef);
 }
-.socialLinks a.twitter:hover  {
+
+.socialLinks a.twitter:hover {
     background: linear-gradient(to right, #1da1f1 45%, #f09433);
 }
 
 .socialLinks a.instagram:hover {
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .contactMap iframe {

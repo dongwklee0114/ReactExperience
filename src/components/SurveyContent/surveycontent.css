@@ -43,7 +43,7 @@
     margin-left: 22px;
 }
 
-.policy_checkbox:checked+label:after {
+.policy_checkbox:checked + label:after {
     background: #544bf0;
 }
 
