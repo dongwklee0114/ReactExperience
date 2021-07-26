@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './hero.css';
 
-function ImageCard(props) {
+function Hero(props) {
     const image = props.image;
     const title = props.title;
     const description = props.description;
@@ -15,4 +15,4 @@ function ImageCard(props) {
     </>
 }
 
-export default ImageCard;
+export default Hero;
