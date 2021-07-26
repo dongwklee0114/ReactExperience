@@ -1,31 +1,31 @@
-.survey_q {
+.surveyQ {
     margin: 40px 0 20px;
     font-weight: bold;
 }
 
-.survey_q > b {
+.surveyQ > b {
     color: #544bf0;
 }
 
-.survey_q > span {
+.surveyQ > span {
     font-weight: 300;
     font-size: 12px;
     line-height: 2;
     vertical-align: bottom;
 }
 
-.survey_radio.color_survey {
+.surveyRadio.colorSurvey {
     display: inline-block;
     width: 16%;
     vertical-align: top;
 }
 
-.survey_radio_btn {
+.surveyRadioBtn {
     display: block;
     margin-bottom: 5px;
 }
 
-.survey_radio.color_survey .survey_radio_btn label {
+.surveyRadio.colorSurvey .surveyRadioBtn label {
     display: inline-block;
     height: 24px;
     padding: 0 12px;
@@ -37,17 +37,17 @@
     border-radius: 16px;
 }
 
-.survey_radio label {
+.surveyRadio label {
     position: relative;
     cursor: pointer;
     margin-left: 22px;
 }
 
-.policy_checkbox:checked + label:after {
+.policyCheckbox:checked + label:after {
     background: #544bf0;
 }
 
-.survey_radio label:before {
+.surveyRadio label:before {
     display: block;
     position: absolute;
     top: 50%;
@@ -63,7 +63,7 @@
     background-color: #eee;
 }
 
-.survey_radio label:after {
+.surveyRadio label:after {
     position: absolute;
     top: 50%;
     left: -20px;
@@ -77,6 +77,6 @@
     border-radius: 50%;
 }
 
-.survey_radio input {
+.surveyRadio input {
     display: none;
 }

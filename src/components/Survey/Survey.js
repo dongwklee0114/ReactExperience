@@ -38,13 +38,13 @@ function Survey(props) {
             );
 
             prevBtnRef.current.disabled = false;
-            prevBtnRef.current.classList.remove('first_step');
+            prevBtnRef.current.classList.remove('firstStep');
 
             if (step === 0) {  // 가장 첫번째 화면
                 percent = '8%';
 
                 prevBtnRef.current.disabled = true;  // prev 버튼 비활성화
-                prevBtnRef.current.classList.add('first_step');  // prev 버튼에 first_step 클래스 추가
+                prevBtnRef.current.classList.add('firstStep');  // prev 버튼에 firstStep 클래스 추가
             } else if (step === stepIndex) {  // 마지막 선택지인 경우
                 percent = '90%';
             }
@@ -65,7 +65,7 @@ function Survey(props) {
             }
         } else {
             if (step !== stepIndex) {
-                if (document.querySelectorAll('.policy_checkbox:checked').length > 0) {
+                if (document.querySelectorAll('.policyCheckbox:checked').length > 0) {
                     setStep(step + 1);
                 } else {
                     alert('항목을 선택해 주세요!');
@@ -99,18 +99,18 @@ function Survey(props) {
         }
     };
 
-    return <section className="survey_base show">
+    return <section className="surveyBase show">
         <div className="survey">
             {stepContent}
-            <div className="survey_radio">
+            <div className="surveyRadio">
                 {poll}
             </div>
-            <div className="survey_next_prev">
-                <button ref={prevBtnRef} className="survey_prev" onClick={() => {
+            <div className="surveyNextPrev">
+                <button ref={prevBtnRef} className="surveyPrev" onClick={() => {
                     stepBtn('prev')
                 }}>Prev
                 </button>
-                <button className="survey_next" onClick={() => {
+                <button className="surveyNext" onClick={() => {
                     stepBtn('next')
                 }}>Next
                 </button>

@@ -6,15 +6,15 @@
     max-width: 1024px;
 }
 
-.survey_next_prev {
+.surveyNextPrev {
     margin-top: 20px;
 }
 
-.survey_next_prev.artwork_checked_step {
+.surveyNextPrev.artworkCheckedStep {
     margin-top: 35px;
 }
 
-.survey_prev {
+.surveyPrev {
     width: 60px;
     height: 24px;
     border: 1px solid #544bf0;
@@ -28,14 +28,14 @@
     margin-right: 8px;
 }
 
-.survey_prev.first_step,
-.survey_next.first_step {
+.surveyPrev.firstStep,
+.surveyNext.firstStep {
     border: 1px solid #d8d8d8;
     color: #d8d8d8;
     cursor: default;
 }
 
-.survey_next {
+.surveyNext {
     width: 60px;
     height: 24px;
     border: 1px solid #544bf0;
