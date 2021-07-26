@@ -8,7 +8,7 @@ function ImageCard(props) {
 
     return <>
         <div className="hero">
-            <img src={image}/>
+            <img src={image} alt=""/>
             <h3>{title}</h3>
             <p>{description}</p>
         </div>

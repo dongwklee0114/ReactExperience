@@ -3,7 +3,7 @@ import Menu from 'components/Menu/Menu';
 import Main from 'components/Main/Main';
 import Footer from 'components/Footer/Footer';
 
-const Home = () => {
+const HomePages = () => {
     return (
         <>
             <Menu/>
@@ -13,4 +13,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomePages;

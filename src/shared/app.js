@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
 import Home from 'pages/home';
-import ArtSurvey from 'pages/artsurvey';
+import Survey from 'pages/survey';
+import Skill from 'pages/skill'
 
 import {Router} from "react-router-dom";
 
@@ -10,7 +11,8 @@ class App extends Component {
         return (
             <>
                 <Route exact path="/" component={Home}/>
-                <Route path="/art-survey/" component={ArtSurvey}/>
+                <Route path="/survey/" component={Survey}/>
+                <Route path="/skill/" component={Skill}/>
             </>
         );
     }

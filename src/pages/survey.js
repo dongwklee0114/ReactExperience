@@ -6,7 +6,7 @@ import Menu from 'components/Menu/Menu';
 import Survey from 'components/Survey/Survey';
 import Footer from 'components/Footer/Footer';
 
-const ArtSurvey = () => {
+const SurveyPages = () => {
     return (
         <>
             <Menu/>
@@ -16,4 +16,4 @@ const ArtSurvey = () => {
     );
 };
 
-export default ArtSurvey;
+export default SurveyPages;

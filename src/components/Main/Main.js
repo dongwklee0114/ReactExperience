@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
@@ -141,10 +141,10 @@ function Main(props) {
     useEffect(() => {
         navContentIndex()
     }, [currentContentIndex]);
-    am4core.useTheme(am4themes_animated);
 
-    // chart start
-    var chart = am4core.create('chartDiv', am4charts.RadarChart);
+    // chart star
+    am4core.useTheme(am4themes_animated);
+    const chart = am4core.create('chartDiv', am4charts.RadarChart);
 
     chart.colors.list = [
         am4core.color('#fbcac9'),
@@ -164,7 +164,7 @@ function Main(props) {
         'value': 76,
         'full': 100
     }, {
-        'category': 'ArtSurvey',
+        'category': 'Survey',
         'value': 100,
         'full': 100
     }, {
@@ -179,7 +179,7 @@ function Main(props) {
     chart.innerRadius = am4core.percent(80);
 
     // 중앙에 있는 숫자
-    var centerLabel = chart.radarContainer.createChild(am4core.Label);
+    const centerLabel = chart.radarContainer.createChild(am4core.Label);
     centerLabel.horizontalCenter = 'middle';
     centerLabel.verticalCenter = 'middle';
     centerLabel.fill = am4core.color('#fff');
@@ -190,7 +190,7 @@ function Main(props) {
     chart.numberFormatter.numberFormat = "#.#'%'";
 
     // Create axes
-    var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+    const categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = 'category';
     categoryAxis.renderer.grid.template.location = 0;
     categoryAxis.renderer.grid.template.strokeOpacity = 0;
@@ -211,7 +211,7 @@ function Main(props) {
     categoryAxis.renderer.cellEndLocation = 0.9
 
     // 테두리 숫자
-    var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+    const valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.strokeOpacity = 0;
     valueAxis.min = 0;
     valueAxis.max = 100;
@@ -220,7 +220,7 @@ function Main(props) {
     valueAxis.renderer.labels.template.fill = am4core.color('#fff');
 
     // Create series(차트 단위)
-    var series1 = chart.series.push(new am4charts.RadarColumnSeries());
+    const series1 = chart.series.push(new am4charts.RadarColumnSeries());
     series1.dataFields.valueX = 'full';
     series1.dataFields.categoryY = 'category';
     series1.clustered = false;
@@ -230,7 +230,7 @@ function Main(props) {
     series1.columns.template.strokeWidth = 0;
     series1.columns.template.radarColumn.cornerRadius = 20;
 
-    var series2 = chart.series.push(new am4charts.RadarColumnSeries());
+    const series2 = chart.series.push(new am4charts.RadarColumnSeries());
     series2.dataFields.valueX = 'value';
     series2.dataFields.categoryY = 'category';
     series2.clustered = false;
@@ -241,7 +241,7 @@ function Main(props) {
         return chart.colors.getIndex(target.dataItem.index);
     });
 
-    var series3 = chart.series.push(new am4charts.RadarColumnSeries());
+    const series3 = chart.series.push(new am4charts.RadarColumnSeries());
     series3.dataFields.valueX = 'value';
     series3.dataFields.categoryY = 'category';
     series3.clustered = false;
