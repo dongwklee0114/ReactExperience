@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import style from 'base.css'
 
 export {default as Home} from './pages/home';
-export {default as ArtSurvey} from './pages/artsurvey';
+export {default as Survey} from './pages/survey';
 
 // ========================================
 

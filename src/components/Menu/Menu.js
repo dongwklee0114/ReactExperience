@@ -2,14 +2,13 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './menu.css'
 
-
 const Menu = () => {
     const activeStyle = {
         fontWeight: 'bold',
         opacity: '1'
     };
     let nav = <nav className="headerWrap cf">
-        <div className="headerLoge"></div>
+        <div className="headerLoge"/>
         <div className="headerRight">
             <div className="headerColor">
                 <a className="headerColorIcon">color</a>
@@ -27,8 +26,8 @@ const Menu = () => {
     </nav>;
     let ul = <ul className="headerNav">
         <li><NavLink className="headerNavBtn" exact to="/" activeStyle={activeStyle}>Home</NavLink></li>
-        <li><NavLink className="headerNavBtn" to="/art-survey" activeStyle={activeStyle}>ArtSurvey</NavLink></li>
-        <li><a className="headerNavBtn">Skill</a></li>
+        <li><NavLink className="headerNavBtn" to="/survey" activeStyle={activeStyle}>Survey</NavLink></li>
+        <li><NavLink className="headerNavBtn" to="/skill" activeStyle={activeStyle}>Skill</NavLink></li>
     </ul>;
 
     return (<>

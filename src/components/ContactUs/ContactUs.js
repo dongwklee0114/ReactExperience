@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './contactus.css';
+
 import InnerConatiner from 'components/InnerContainer/InnerConatiner';
 
 function ContactUs(props) {
@@ -13,12 +14,10 @@ function ContactUs(props) {
                             <h4>Location:</h4>
                             <p>27-7, Jongam-ro 14-gil, Seongbuk-gu, Seoul, 02800</p>
                         </div>
-
                         <div className="email">
                             <h4>Email:</h4>
                             <p>redking011444@gmail.com</p>
                         </div>
-
                         <div className="phone">
                             <h4>Call:</h4>
                             <p>+82 4765 4888</p>

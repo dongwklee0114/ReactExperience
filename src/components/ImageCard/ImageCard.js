@@ -12,7 +12,7 @@ function ImageCard(props) {
     return <>
         <div className={className}>
             <div className="imageCard">
-                <img src={image}/>
+                <img src={image} alt=""/>
                 <h3>{title}</h3>
                 <p>{description}</p>
             </div>
