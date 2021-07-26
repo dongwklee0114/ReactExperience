@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './chart.css';
+
 import InnerConatiner from "components/InnerContainer/InnerConatiner";
 
 function Chart(props) {

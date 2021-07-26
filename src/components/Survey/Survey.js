@@ -7,7 +7,7 @@ import styles from './survey.css';
 
 import {useHistory} from "react-router-dom";
 
-function Survey(props) {
+function Survey() {
     let history = useHistory();
     const [poll, setPoll] = useState([]);
     const [step, setStep] = useState(0);
@@ -78,10 +78,9 @@ function Survey(props) {
                         state: {detail: resultList}
                     });
                 }
-                ;
             }
         }
-    };
+    }
 
     function radioBtn(value) {  // radio 버튼 클릭시 동작
         if (step === stepIndex) {  // 마지막 선택지를 고른 경우
@@ -92,12 +91,11 @@ function Survey(props) {
                     state: {detail: resultList}
                 });
             }
-            ;
         } else {
             setResultList([...resultList, value]);  // 기존 state 배열에 선택지를 추가
             setStep(step + 1);
         }
-    };
+    }
 
     return <section className="surveyBase show">
         <div className="survey">

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
+
 import Home from 'pages/home';
 import Survey from 'pages/survey';
 import Skill from 'pages/skill'

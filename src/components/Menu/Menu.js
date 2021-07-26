@@ -2,7 +2,6 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './menu.css'
 
-
 const Menu = () => {
     const activeStyle = {
         fontWeight: 'bold',

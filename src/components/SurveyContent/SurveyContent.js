@@ -17,6 +17,6 @@ function SurveyContent(props) {
         <div className="surveyQ"><b>Q.</b> {props.title}</div>
         {radioListItem}
     </>;
-};
+}
 
 export default SurveyContent;
